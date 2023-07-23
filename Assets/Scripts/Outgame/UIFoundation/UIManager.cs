@@ -19,7 +19,7 @@ public class UIManager
     Stack<UIInformationBase> _uiSceneHistory = new Stack<UIInformationBase>();
     Stack<UIStackableView> _uiStack = new Stack<UIStackableView>();
 
-    Dictionary<ViewID, GameObject> _sceneCache = new Dictionary<ViewID, GameObject>(); 
+    Dictionary<ViewID, GameObject> _sceneCache = new Dictionary<ViewID, GameObject>();
 
 
     public static void Setup(ViewID entry)
@@ -95,7 +95,7 @@ public class UIManager
             Debug.LogError($"{next.ToString()}: シーン管理スクリプトの読み込みに失敗");
             return;
         }
-        
+
         CreateUIParts(next);
 
         view.Enter();
@@ -145,7 +145,7 @@ public class UIManager
         }
         else
         {
-            _instance._uiSceneHistory.Push(new UIInformationBase() { ViewID = next});
+            _instance._uiSceneHistory.Push(new UIInformationBase() { ViewID = next });
         }
         _instance.LoadScene(next, info);
     }
@@ -158,10 +158,10 @@ public class UIManager
 
     void CreateUIParts(ViewID next)
     {
-        switch(next)
+        switch (next)
         {
             case ViewID.Home:
-                if(UIStatusBar.IsNull)
+                if (UIStatusBar.IsNull)
                 {
                     var stOrigin = Addressables.LoadAssetAsync<GameObject>("Assets/Scenes/Game/UI/Status.prefab").WaitForCompletion();
                     GameObject.Instantiate(stOrigin, _root);
