@@ -40,6 +40,7 @@ public class UIView : MonoBehaviour
 
     public virtual void Active()
     {
+        _canvasGroup = GetComponent<CanvasGroup>();
         _canvasGroup.alpha = 1.0f;
         IsActive = true;
     }

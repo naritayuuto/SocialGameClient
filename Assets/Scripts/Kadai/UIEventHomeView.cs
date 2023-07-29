@@ -2,25 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 namespace Outgame
 {
     public class UIEventHomeView : UIStackableView
     {
         [SerializeField] TextMeshProUGUI _text;
-        [SerializeField] GameObject button;
+        [SerializeField] Button button;
         protected override void AwakeCall()
         {
             ViewId = ViewID.EventHome;
             _hasPopUI = false;
 
-            CreateView();
+            EventButtonIsActive();
         }
-        void CreateView()
+        void EventButtonIsActive()
         {
-            bool IsEvent = EventHelper.IsEventGamePlayable(1);
-            button.SetActive(IsEvent);
-                //ここで開催中だったらイベント名をテキストに表示、無かったらテキストにはその情報を記載。
+            List<int> eventList = EventHelper.GetAllOpenedEvent();
+            for (int i = 0; i < eventList.Count; i++)
+            {
+                if (EventHelper.IsEventGamePlayable(eventList[i]) == true)
+                {
+                    button.interactable = true;
+                    break;
+                }
+            }
         }
 
         public void GoHome()

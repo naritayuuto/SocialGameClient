@@ -10,12 +10,19 @@ namespace Outgame
 {
     public class UIHomeView : UIStackableView
     {
+        [SerializeField] GameObject eventButton = null;
+        private void Awake()
+        {
+            if (EventHelper.GetAllOpenedEvent().Count == 0)
+            {
+                eventButton.SetActive(false);
+            }
+        }
         protected override void AwakeCall()
         {
             ViewId = ViewID.Home;
             _hasPopUI = true;
         }
-
         public override void Enter()
         {
             base.Enter();

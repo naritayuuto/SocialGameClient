@@ -11,7 +11,7 @@ namespace Outgame
 {
     public class UIEventQuestView : UIStackableView
     {
-        [SerializeField] QuestListView _listView;
+        [SerializeField] EventQuestListView _listView;
 
         protected override void AwakeCall()
         {

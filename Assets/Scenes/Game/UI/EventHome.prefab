@@ -553,6 +553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isActive: 0
   _text: {fileID: 1494196080987026489}
+  button: {fileID: 1494196081047933576}
 --- !u!225 &3268877151730678471
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -600,7 +601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 128.99994, y: -122.00003}
+  m_AnchoredPosition: {x: 558, y: -447}
   m_SizeDelta: {x: 800, y: 150}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1494196080987026486
@@ -818,7 +819,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1494196081047933577}
   m_OnClick:
     m_PersistentCalls:
