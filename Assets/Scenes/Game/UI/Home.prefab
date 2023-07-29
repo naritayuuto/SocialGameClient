@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 1277684904}
   - component: {fileID: 1277684903}
   m_Layer: 5
-  m_Name: Event
+  m_Name: EventHome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5374111005199522437}
         m_TargetAssemblyTypeName: Outgame.UIHomeView, Assembly-CSharp
-        m_MethodName: GoQuest
+        m_MethodName: GoEventHome
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 49481034}
-  _textKey: UIEvent
+  _textKey: UIEventHome
 --- !u!1 &760165425400832082
 GameObject:
   m_ObjectHideFlags: 0

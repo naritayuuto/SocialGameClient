@@ -25,6 +25,9 @@ namespace Outgame
         CardInfo,
 
         Event = 10000,
-        MyHome,
-        MyStatus    }
+        EventHome,
+        EventQuest,
+        EventQuestResult,
+        Ranking
+    }
 }
